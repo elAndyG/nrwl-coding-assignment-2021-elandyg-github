@@ -1,0 +1,36 @@
+<h1>Create a Ticket</h1>
+
+<form #createTicket="ngForm">
+  <div class="form-field">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      required
+      [(ngModel)]="ticket.description"
+      name="description"
+      #name="ngModel"
+    />
+  </div>
+  <div class="form-field">
+    <label for="assigneeId">Assigned To</label>
+    <input
+      type="text"
+      class="form-control"
+      id="assigneeId"
+      required
+      [(ngModel)]="ticket.assigneeId"
+      name="assigneeId"
+    />
+  </div>
+  <div class="form-field">
+    <label for="completed">Is Complete</label>
+    <input
+      id="completed"
+      type="checkbox"
+      name="completed"
+      [(ngModel)]="team.completed"
+    />
+  </div>
+</form>
